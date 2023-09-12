@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gv1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_30sdp" />
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/gv1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Sign up"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:src="@drawable/user_login"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTitle"/>
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:text="Welcome back , Rohit thakur "
+        app:layout_constraintStart_toEndOf="@id/gv1"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+        android:id="@+id/edtPhoneNumer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Number"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:textColorHint="#545151"
+        android:inputType="number"
+        android:background="@drawable/border"
+        android:layout_marginRight="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@id/img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gv1" />
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="Password"
+        android:padding="@dimen/_10sdp"
+        android:textColorHint="#545151"
+        android:background="@drawable/border"
+        android:inputType="textPassword"
+        android:layout_marginRight="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@id/edtPhoneNumer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gv1" />
+    <EditText
+        android:id="@+id/edtComfirmPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="ComfirmPassword"
+        android:padding="@dimen/_10sdp"
+        android:textColorHint="#545151"
+        android:inputType="textPassword"
+        android:background="@drawable/border"
+        android:layout_marginRight="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@id/edtPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gv1" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_login"
+        android:layout_marginTop = "@dimen/_10sdp"
+        android:text="Register"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/edtPhoneNumer"
+        app:layout_constraintTop_toBottomOf="@id/edtComfirmPassword" />
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/btn_login"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/btnRegister"
+        app:layout_constraintEnd_toEndOf="@id/edtPhoneNumer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
